@@ -6,10 +6,10 @@ Implements AES encryption and LSB steganography
 import os
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.primitives import hashes
-from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2
+from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC  # ← Fixed!
 from cryptography.hazmat.backends import default_backend
 from PIL import Image
-import numpy as np
+import numpy as np  # ← Fixed the 'n' typo!
 
 
 class CryptoStego:
@@ -32,9 +32,9 @@ class CryptoStego:
         Returns:
             32-byte key for AES-256
         """
-        kdf = PBKDF2(
+        kdf = PBKDF2HMAC(
             algorithm=hashes.SHA256(),
-            length=32,  # 256 bits for AES-256
+            length=32,
             salt=salt,
             iterations=self.pbkdf2_iterations,
             backend=self.backend
