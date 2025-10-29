@@ -16,8 +16,8 @@ class SteganographyGUI:
     def __init__(self, root):
         self.root = root
         self.root.title("Steganography with AES Encryption")
-        self.root.geometry("800x700")
-        self.root.resizable(False, False)
+        self.root.geometry("900x800")
+        self.root.resizable(True, True)
         
         self.crypto_stego = CryptoStego()
         self.cover_image_path = None
