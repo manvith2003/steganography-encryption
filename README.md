@@ -86,7 +86,7 @@ Educational use only.
 
 ## 👨‍💻 Author
 
-[Your Name] - CSS411 Mini Project
+Manvith M- CSS411 Mini Project
 
 ## 🙏 Acknowledgments
 
